@@ -1,0 +1,27 @@
+@import url('typography.css');
+
+:root {
+    /* PRIMARY */
+    --cyan:hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    /* NEUTRAL */
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue:  hsl(218, 22%, 67%);
+}
+
+html, body {
+    min-width: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    height: 100vh;
+    background-color: var(--light-gray);
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
