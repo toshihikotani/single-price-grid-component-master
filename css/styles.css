@@ -9,6 +9,7 @@
     --grayish-blue:  hsl(218, 22%, 67%);
 }
 
+/* COMMON */
 html, body {
     min-width: 100vh;
 }
@@ -25,3 +26,147 @@ body {
     align-items: center;
 }
 
+/* FONT */
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+h1, button {
+    font-family: 'Karla-Bold';
+}
+
+p, li {
+    font-family: 'Karla-Regular';
+}
+
+/* MAIN */
+main {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  CONTEXT BOX */
+.content-box {
+    width: 265px;
+    height: 665px;
+    display: grid;
+    grid-template-rows: 270px 230px 230px;
+    border-radius: 5px;
+}
+
+.content-box > .subscription-article,
+.content-box > .why-us-article {
+    padding: 25px 20px;
+}
+
+/* COMMUNITY ARTICLE */
+.content-box > .community-article {
+    background-color: white;
+    padding: 30px 20px 40px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.content-box > .community-article > h1 {
+    color: var(--cyan);
+    font-size: 1.25em;
+}
+
+.content-box > .community-article > .hassle-free-paragraph {
+    font-family: 'Karla-Bold' !important;
+    font-size: 0.95em;
+    color: var(--bright-yellow);
+    margin: 20px 0px;
+}
+
+.content-box > .community-article > .gain-access-paragraph {
+    color: var(--grayish-blue);
+    font-size: 0.85em;
+    line-height: 28px;
+}
+
+/* SUBSCRIPTION ARTICLE */
+.content-box > .subscription-article {
+    background-color: var(--cyan);
+}
+
+.content-box > .subscription-article > h1, 
+.content-box > .subscription-article > .subscription-price,
+.content-box > .subscription-article > .full-access-paragraph {
+    color: white;
+}
+
+.content-box > .subscription-article > h1 {
+    font-size: 1.15em;
+}
+
+.content-box > .subscription-article > .subscription-price {
+    font-family: 'Karla-Bold' !important;
+    font-size: 2em;
+    margin: 14px 0px;
+}
+
+.content-box > .subscription-article > .subscription-price > span {
+    color: hsla(204, 43%, 93%, 0.7);
+    font-family: 'Karla-Regular' !important;
+    font-size: 0.5em;
+}
+
+.content-box > .subscription-article > .full-access-paragraph {
+    margin-bottom: 24px;
+}
+
+.content-box > .subscription-article > button {
+    width: 265px;
+    height: 50px;
+    background-color: var(--bright-yellow);
+    color: var(--light-gray);
+    border-width: 0px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px hsl(179, 64%, 31%);
+    font-size: 1em;
+}
+
+/* WHY US ARTICLE */
+.content-box > .why-us-article {
+    background-color: hsla(179, 62%, 43%, 0.9);
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+.content-box > .why-us-article > h1 {
+    color: white;
+    font-size: 1.15em;
+}
+
+.content-box > .why-us-article > ul {
+    list-style-type: none;
+    padding: 0;
+    color: hsla(204, 43%, 93%, 0.7);
+    font-size: 0.85em;
+    line-height: 20px;
+}
+
+/* PORTRAIT TABLET */
+@media only screen and (min-width:600px){
+
+}
+
+/* LANDSCAPE TABLET */
+@media only screen and (min-width:768px){
+
+}
+
+/* LAPTOP / DESKTOP */
+@media only screen and (min-width:992px){
+
+}
+
+/* LARGE LAPTOP / DESKTOP */
+@media only screen and (min-width:1200px){
+
+}
