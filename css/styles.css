@@ -11,13 +11,12 @@
 
 /* COMMON */
 html, body {
-    min-width: 100vh;
+    min-width: 100vw;
 }
 
 body {
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
     height: 100vh;
     background-color: var(--light-gray);
     font-size: 16px;
@@ -42,15 +41,6 @@ p, li {
 
 /* MAIN */
 main {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/*  CONTEXT BOX */
-.content-box {
     width: 265px;
     height: 665px;
     display: grid;
@@ -58,69 +48,69 @@ main {
     border-radius: 5px;
 }
 
-.content-box > .subscription-article,
-.content-box > .why-us-article {
+main > .subscription-article,
+main > .why-us-article {
     padding: 25px 20px;
 }
 
 /* COMMUNITY ARTICLE */
-.content-box > .community-article {
+main > .community-article {
     background-color: white;
     padding: 30px 20px 40px;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
 }
 
-.content-box > .community-article > h1 {
+main > .community-article > h1 {
     color: var(--cyan);
     font-size: 1.25em;
 }
 
-.content-box > .community-article > .hassle-free-paragraph {
+main > .community-article > .hassle-free-paragraph {
     font-family: 'Karla-Bold' !important;
     font-size: 0.95em;
     color: var(--bright-yellow);
     margin: 20px 0px;
 }
 
-.content-box > .community-article > .gain-access-paragraph {
+main > .community-article > .gain-access-paragraph {
     color: var(--grayish-blue);
     font-size: 0.85em;
     line-height: 28px;
 }
 
 /* SUBSCRIPTION ARTICLE */
-.content-box > .subscription-article {
+main > .subscription-article {
     background-color: var(--cyan);
 }
 
-.content-box > .subscription-article > h1, 
-.content-box > .subscription-article > .subscription-price,
-.content-box > .subscription-article > .full-access-paragraph {
+main > .subscription-article > h1, 
+main > .subscription-article > .subscription-price,
+main > .subscription-article > .full-access-paragraph {
     color: white;
 }
 
-.content-box > .subscription-article > h1 {
+main >  .subscription-article > h1 {
     font-size: 1.15em;
 }
 
-.content-box > .subscription-article > .subscription-price {
+main > .subscription-article > .subscription-price {
     font-family: 'Karla-Bold' !important;
     font-size: 2em;
     margin: 14px 0px;
 }
 
-.content-box > .subscription-article > .subscription-price > span {
+main > .subscription-article > .subscription-price > span {
     color: hsla(204, 43%, 93%, 0.7);
     font-family: 'Karla-Regular' !important;
     font-size: 0.5em;
 }
 
-.content-box > .subscription-article > .full-access-paragraph {
+main > .subscription-article > .full-access-paragraph {
     margin-bottom: 24px;
 }
 
-.content-box > .subscription-article > button {
+main > .subscription-article > button {
     width: 265px;
     height: 50px;
     background-color: var(--bright-yellow);
@@ -132,18 +122,18 @@ main {
 }
 
 /* WHY US ARTICLE */
-.content-box > .why-us-article {
+main > .why-us-article {
     background-color: hsla(179, 62%, 43%, 0.9);
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
 }
 
-.content-box > .why-us-article > h1 {
+main > .why-us-article > h1 {
     color: white;
     font-size: 1.15em;
 }
 
-.content-box > .why-us-article > ul {
+main > .why-us-article > ul {
     list-style-type: none;
     padding: 0;
     color: hsla(204, 43%, 93%, 0.7);
@@ -159,6 +149,70 @@ main {
 /* LANDSCAPE TABLET */
 @media only screen and (min-width:768px){
 
+    /* MAIN */
+    main  {
+        width: 640px;
+        height: 475px;
+        grid-template-rows: 220px 260px;
+        grid-template-columns: 320px 320px;
+        grid-template-areas: 
+        'community-article community-article'
+        'subscription-article why-us-article';
+    }
+
+    main > .subscription-article,
+    main > .why-us-article {
+        padding: 40px;
+    }
+
+    /* COMMUNITY ARTICLE */
+    main > .community-article {
+        grid-area: community-article;
+        padding: 42px;
+    }
+
+    main > .community-article > h1 {
+        font-size: 1.5em;
+    }
+
+    main > .community-article > .hassle-free-paragraph {
+        font-size: 1.10em;
+        margin: 24px 0px 0px;
+    }
+
+    main > .community-article > .gain-access-paragraph {
+        font-size: 0.95em;
+        margin: 10px 0px 2px;
+    } 
+
+    /* SUBSCRIPTION ARTICLE */
+    main > .subscription-article {
+        grid-area: subscription-article;
+        border-bottom-left-radius: inherit;
+    }
+
+    main >  .subscription-article > h1 {
+        font-size: 1.10em;
+    }
+
+    main > .subscription-article > .subscription-price {
+        margin: 12px 0px;
+    }
+
+    main > .subscription-article > button {
+        width: 240px;
+    }
+
+    /* WHY US ARTICLE */
+    main > .why-us-article {
+        grid-area: why-us-article;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: inherit;
+    }
+
+    main > .why-us-article > h1 {
+        font-size: 1.10em;
+    }
 }
 
 /* LAPTOP / DESKTOP */
